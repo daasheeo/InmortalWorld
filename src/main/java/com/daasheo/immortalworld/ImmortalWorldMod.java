@@ -1,4 +1,4 @@
-package com.daasheo.inmortalworld;
+package com.daasheo.immortalworld;
 
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
@@ -13,17 +13,17 @@ import java.util.logging.Level;
  * allowing players to progress through different cultivation realms,
  * manage their Qi energy, and develop physical strength.
  */
-public class InmortalWorldMod extends JavaPlugin {
+public class ImmortalWorldMod extends JavaPlugin {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    private static InmortalWorldMod instance;
+    private static ImmortalWorldMod instance;
 
     /**
      * Creates a new instance of the Immortal World mod plugin.
      * 
      * @param init Plugin initialization context from Hytale server
      */
-    public InmortalWorldMod(@Nonnull JavaPluginInit init) {
+    public ImmortalWorldMod(@Nonnull JavaPluginInit init) {
         super(init);
         instance = this;
     }
@@ -33,7 +33,7 @@ public class InmortalWorldMod extends JavaPlugin {
      * 
      * @return The plugin instance
      */
-    public static InmortalWorldMod getInstance() {
+    public static ImmortalWorldMod getInstance() {
         return instance;
     }
 
@@ -41,29 +41,29 @@ public class InmortalWorldMod extends JavaPlugin {
 
     @Override
     protected void setup() {
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Initializing cultivation system...");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Initializing cultivation system...");
 
         try {
             registerComponents();
             registerEventHandlers();
-            LOGGER.at(Level.INFO).log("[InmortalWorld] Cultivation system initialized successfully!");
+            LOGGER.at(Level.INFO).log("[ImmortalWorld] Cultivation system initialized successfully!");
         } catch (Exception e) {
-            LOGGER.at(Level.SEVERE).withCause(e).log("[InmortalWorld] Failed to initialize cultivation system!");
-            throw new RuntimeException("Failed to setup InmortalWorld mod", e);
+            LOGGER.at(Level.SEVERE).withCause(e).log("[ImmortalWorld] Failed to initialize cultivation system!");
+            throw new RuntimeException("Failed to setup ImmortalWorld mod", e);
         }
     }
 
     @Override
     protected void start() {
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Mod started successfully!");
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Cultivation system is now active.");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Mod started successfully!");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Cultivation system is now active.");
     }
 
     @Override
     protected void shutdown() {
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Shutting down cultivation system...");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Shutting down cultivation system...");
         instance = null;
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Mod shutdown complete.");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Mod shutdown complete.");
     }
 
     // ==================== Registration Methods ====================
@@ -72,22 +72,22 @@ public class InmortalWorldMod extends JavaPlugin {
      * Registers all custom ECS components for the cultivation system.
      */
     private void registerComponents() {
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Registering cultivation components...");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Registering cultivation components...");
         // Component registration is handled via the CODEC static fields
         // and will be registered when first accessed
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Components registered.");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Components registered.");
     }
 
     /**
      * Registers event handlers for the cultivation system.
      */
     private void registerEventHandlers() {
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Registering event handlers...");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Registering event handlers...");
         // TODO: Implement event handlers for cultivation mechanics
         // - Player join: initialize cultivation component
         // - Player level up: check for realm advancement
         // - Combat events: apply cultivation bonuses
-        LOGGER.at(Level.INFO).log("[InmortalWorld] Event handlers registered.");
+        LOGGER.at(Level.INFO).log("[ImmortalWorld] Event handlers registered.");
     }
 
     // ==================== Utility Methods ====================
@@ -99,7 +99,7 @@ public class InmortalWorldMod extends JavaPlugin {
      * @param message Message to log
      */
     public void debugLog(String message) {
-        LOGGER.at(Level.FINE).log("[InmortalWorld Debug] " + message);
+        LOGGER.at(Level.FINE).log("[ImmortalWorld Debug] " + message);
     }
 
     /**
@@ -110,6 +110,6 @@ public class InmortalWorldMod extends JavaPlugin {
      */
     public void logError(String context, Throwable throwable) {
         LOGGER.at(Level.SEVERE).withCause(throwable)
-            .log("[InmortalWorld] Error in " + context + ": " + throwable.getMessage());
+            .log("[ImmortalWorld] Error in " + context + ": " + throwable.getMessage());
     }
 }

@@ -1,4 +1,4 @@
-package com.daasheo.inmortalworld.cultivation;
+package com.daasheo.immortalworld.cultivation;
 
 import com.hypixel.hytale.codec.Codec;
 

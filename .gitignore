@@ -5,7 +5,9 @@
 *.iml
 .kilocode/
 .kilocodemodes
-
+.gradle/*
 # Hytale
 libs/HytaleServer.jar
 server/
+build/
+/docs/

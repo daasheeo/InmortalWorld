@@ -3,7 +3,7 @@ plugins {
     id 'com.gradleup.shadow' version '8.3.0'
 }
 
-group = 'com.daasheo.inmortalworld'
+group = 'com.daasheo.immortalworld'
 version = '1.0.0'
 
 repositories {
