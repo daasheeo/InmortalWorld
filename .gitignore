@@ -11,3 +11,4 @@ libs/HytaleServer.jar
 server/
 build/
 /docs/
+/libs/hytale-api-extracted/
