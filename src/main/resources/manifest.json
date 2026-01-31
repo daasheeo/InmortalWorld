@@ -1,0 +1,10 @@
+{
+  "Group": "com.daasheo.inmortalworld",
+  "Name": "InmortalWorld",
+  "Version": "1.0.0",
+  "Description": "A cultivation-based mod for Hytale. Progress through different cultivation realms, manage Qi energy, and develop your physical strength!",
+  "Authors": [{"Name": "Daasheo"}],
+  "Main": "com.daasheo.inmortalworld.InmortalWorldMod",
+  "LoadOrder": "POSTWORLD",
+  "IncludesAssetPack": true
+}
